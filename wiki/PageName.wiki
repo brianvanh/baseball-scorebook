@@ -1,0 +1,9 @@
+#summary Requirements for the Baseball Scorebook Application
+#labels Phase-Requirements
+
+= Introduction =
+
+The Baseball Scorebook application is intended to be used for those looking to score baseball games using a computer.
+
+
+= Section 1 - Functional Requirements =
