@@ -6,20 +6,54 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>579</width>
-    <height>356</height>
+    <width>587</width>
+    <height>383</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Scorebook</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>260</y>
+      <width>581</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="newGameButton">
+       <property name="text">
+        <string>Start New Game</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="modifyButton">
+       <property name="text">
+        <string>Modify</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="quitButton">
+       <property name="text">
+        <string>Quit</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>579</width>
+     <width>587</width>
      <height>25</height>
     </rect>
    </property>
@@ -51,6 +85,11 @@
    </property>
   </action>
  </widget>
+ <tabstops>
+  <tabstop>newGameButton</tabstop>
+  <tabstop>modifyButton</tabstop>
+  <tabstop>quitButton</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
