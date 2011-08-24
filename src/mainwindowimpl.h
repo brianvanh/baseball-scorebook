@@ -11,10 +11,11 @@ public:
 	MainWindowImpl( QWidget * parent = 0, Qt::WFlags f = 0 );
 private slots:
 	void close();
+	void startNewGame();
 	
 private:
 	void setStatusBarMessage(const char* str, int ms);
-	void clearStatusBarMessage();
+	void clearStatusBarMessage();	
 };
 #endif
 

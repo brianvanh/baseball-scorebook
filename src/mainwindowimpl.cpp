@@ -1,7 +1,5 @@
-#include <QString>
 #include <QDesktopWidget>
 #include <QDebug>
-#include <QThread>
 #include "mainwindowimpl.h"
 
 MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f) 
@@ -22,7 +20,8 @@ MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f)
 	move ( x, y );
 	
 	connect( actionQuit, SIGNAL( triggered() ), this, SLOT( close() ) );
-	//clearStatusBarMessage(); 
+	connect( newGameButton, SIGNAL( clicked() ), this, SLOT( startNewGame() ) );
+	connect( quitButton, SIGNAL( clicked() ), this, SLOT( close() ) );
 }
 
 void MainWindowImpl::close()
@@ -39,4 +38,9 @@ void MainWindowImpl::setStatusBarMessage(const char* str, int ms)
 void MainWindowImpl::clearStatusBarMessage()
 {
 	statusBar() -> clearMessage();
+}
+
+void MainWindowImpl::startNewGame()
+{
+	qDebug() << "Starting new game!";
 }
