@@ -12,13 +12,10 @@ public:
 private slots:
 	void close();
 	void startNewGame();
+	void modify();
 	
 private:
 	void setStatusBarMessage(const char* str, int ms);
 	void clearStatusBarMessage();	
 };
 #endif
-
-
-
-

@@ -1,6 +1,10 @@
 #include <QDesktopWidget>
 #include <QDebug>
+#include <iostream>
 #include "mainwindowimpl.h"
+#include "player.h"
+
+using namespace std;
 
 MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f) 
 	: QMainWindow(parent, f)
@@ -22,6 +26,7 @@ MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f)
 	connect( actionQuit, SIGNAL( triggered() ), this, SLOT( close() ) );
 	connect( newGameButton, SIGNAL( clicked() ), this, SLOT( startNewGame() ) );
 	connect( quitButton, SIGNAL( clicked() ), this, SLOT( close() ) );
+	connect( modifyButton, SIGNAL( clicked() ), this, SLOT( modify() ) );
 }
 
 void MainWindowImpl::close()
@@ -43,4 +48,10 @@ void MainWindowImpl::clearStatusBarMessage()
 void MainWindowImpl::startNewGame()
 {
 	qDebug() << "Starting new game!";
+}
+
+void MainWindowImpl::modify()
+{
+	Player p1("Pittenger", "Aaron");
+	qDebug() << p1.getLastName().c_str() << ", " << p1.getFirstName().c_str();
 }
