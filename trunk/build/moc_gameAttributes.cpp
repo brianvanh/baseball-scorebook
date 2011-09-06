@@ -1,13 +1,13 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'gameAttributes.h'
 **
-** Created: Mon Sep 5 20:50:41 2011
+** Created: Mon Sep 5 21:02:53 2011
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../gameAttributes.h"
+#include "../src/gameAttributes.h"
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'gameAttributes.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 62

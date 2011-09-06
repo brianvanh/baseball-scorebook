@@ -7,14 +7,12 @@ MOC_DIR = build
 UI_DIR = build
 FORMS = ui/mainwindow.ui ui/gameoptions.ui
 HEADERS = src/mainwindowimpl.h \
- player.h \
  src/game.h \
  src/gameAttributes.h \
  src/player.h \
  src/team.h
 SOURCES = src/mainwindowimpl.cpp \
  src/main.cpp \
- player.cpp \
  src/game.cpp \
  src/gameAttributes.cpp \
  src/player.cpp \
