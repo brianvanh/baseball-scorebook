@@ -3,6 +3,7 @@
 #include <iostream>
 #include "mainwindowimpl.h"
 #include "player.h"
+#include "gameAttributes.h"
 
 using namespace std;
 
@@ -27,6 +28,7 @@ MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f)
 	connect( newGameButton, SIGNAL( clicked() ), this, SLOT( startNewGame() ) );
 	connect( quitButton, SIGNAL( clicked() ), this, SLOT( close() ) );
 	connect( modifyButton, SIGNAL( clicked() ), this, SLOT( modify() ) );
+	connect( actionGame_Attributes, SIGNAL( triggered() ), this, SLOT( getAttrs() ) );
 }
 
 void MainWindowImpl::close()
@@ -48,6 +50,14 @@ void MainWindowImpl::clearStatusBarMessage()
 void MainWindowImpl::startNewGame()
 {
 	qDebug() << "Starting new game!";
+}
+
+void MainWindowImpl::getAttrs()
+{
+	qDebug() << "Getting Attributes!";
+	GameAttributes ga;
+	ga.show();
+	ga.exec();
 }
 
 void MainWindowImpl::modify()

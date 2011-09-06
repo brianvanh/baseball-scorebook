@@ -63,7 +63,14 @@
     </property>
     <addaction name="actionQuit"/>
    </widget>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>Options</string>
+    </property>
+    <addaction name="actionGame_Attributes"/>
+   </widget>
    <addaction name="menuFile"/>
+   <addaction name="menuOptions"/>
   </widget>
   <widget class="QStatusBar" name="statusbar">
    <property name="enabled">
@@ -82,6 +89,16 @@
    </property>
    <property name="iconVisibleInMenu">
     <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionGame_Parameters">
+   <property name="text">
+    <string>Game Parameters</string>
+   </property>
+  </action>
+  <action name="actionGame_Attributes">
+   <property name="text">
+    <string>Game Attributes</string>
    </property>
   </action>
  </widget>
