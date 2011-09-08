@@ -14,7 +14,14 @@ class GameAttributes : public QDialog, private Ui::GameOptions
 	private slots:
 		void okSelected();
 		void cancelSelected();
-		//void on_inputSpinBox2_valueChanged(int value);
+	
+	private:
+		bool getVariablesFromFile();
+		void setVariable(std::string key, std::string value);
+		void writeAttributes(std::ofstream *out);
+		bool setVariablesFromUser();
+		int innings, startingBalls, startingStrikes, players;
+		bool extras, bunt, hbp, stealing, balks;
 };
 
 #endif // __GAMEATTRIBUTES_H__
