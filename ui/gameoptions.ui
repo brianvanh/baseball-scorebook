@@ -49,7 +49,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QSpinBox" name="spinBox">
+       <widget class="QSpinBox" name="inningsSpinBox">
         <property name="suffix">
          <string/>
         </property>
@@ -65,7 +65,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QCheckBox" name="checkBox">
+       <widget class="QCheckBox" name="extrasCheckBox">
         <property name="text">
          <string>Extra Innings Allowed?</string>
         </property>
@@ -76,7 +76,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_4">
       <item>
-       <widget class="QCheckBox" name="checkBox_2">
+       <widget class="QCheckBox" name="buntingCheckBox">
         <property name="text">
          <string>Bunting Allowed?</string>
         </property>
@@ -86,7 +86,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QCheckBox" name="checkBox_3">
+       <widget class="QCheckBox" name="hbpCheckBox">
         <property name="text">
          <string>HBP allowed?</string>
         </property>
@@ -100,7 +100,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_5">
       <item>
-       <widget class="QCheckBox" name="checkBox_4">
+       <widget class="QCheckBox" name="stealingCheckBox">
         <property name="text">
          <string>Stealing Allowed?</string>
         </property>
@@ -110,7 +110,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QCheckBox" name="checkBox_5">
+       <widget class="QCheckBox" name="balksCheckBox">
         <property name="text">
          <string>Balks?</string>
         </property>
@@ -131,7 +131,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QSpinBox" name="spinBox_2">
+       <widget class="QSpinBox" name="ballsSpinBox">
         <property name="maximum">
          <number>3</number>
         </property>
@@ -148,7 +148,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QSpinBox" name="spinBox_3">
+       <widget class="QSpinBox" name="strikesSpinBox">
         <property name="maximum">
          <number>2</number>
         </property>
@@ -173,7 +173,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QSpinBox" name="spinBox_4">
+       <widget class="QSpinBox" name="playersSpinBox">
         <property name="minimum">
          <number>1</number>
         </property>

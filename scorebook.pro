@@ -10,10 +10,14 @@ HEADERS = src/mainwindowimpl.h \
  src/game.h \
  src/gameAttributes.h \
  src/player.h \
- src/team.h
+ src/team.h \
+ src/io_settings.h \
+ src/tools.h
 SOURCES = src/mainwindowimpl.cpp \
  src/main.cpp \
  src/game.cpp \
  src/gameAttributes.cpp \
  src/player.cpp \
- src/team.cpp
+ src/team.cpp \
+ src/io_settings.cpp \
+ src/tools.cpp

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'gameoptions.ui'
 **
-** Created: Mon Sep 5 21:02:50 2011
+** Created: Wed Sep 7 21:37:02 2011
 **      by: Qt User Interface Compiler version 4.7.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -34,23 +34,23 @@ public:
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
-    QSpinBox *spinBox;
-    QCheckBox *checkBox;
+    QSpinBox *inningsSpinBox;
+    QCheckBox *extrasCheckBox;
     QHBoxLayout *horizontalLayout_4;
-    QCheckBox *checkBox_2;
-    QCheckBox *checkBox_3;
+    QCheckBox *buntingCheckBox;
+    QCheckBox *hbpCheckBox;
     QHBoxLayout *horizontalLayout_5;
-    QCheckBox *checkBox_4;
-    QCheckBox *checkBox_5;
+    QCheckBox *stealingCheckBox;
+    QCheckBox *balksCheckBox;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_2;
-    QSpinBox *spinBox_2;
+    QSpinBox *ballsSpinBox;
     QLabel *label_3;
-    QSpinBox *spinBox_3;
+    QSpinBox *strikesSpinBox;
     QLabel *label_4;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_5;
-    QSpinBox *spinBox_4;
+    QSpinBox *playersSpinBox;
 
     void setupUi(QDialog *GameOptions)
     {
@@ -75,51 +75,51 @@ public:
 
         horizontalLayout->addWidget(label);
 
-        spinBox = new QSpinBox(verticalLayoutWidget);
-        spinBox->setObjectName(QString::fromUtf8("spinBox"));
-        spinBox->setMinimum(1);
-        spinBox->setMaximum(9);
+        inningsSpinBox = new QSpinBox(verticalLayoutWidget);
+        inningsSpinBox->setObjectName(QString::fromUtf8("inningsSpinBox"));
+        inningsSpinBox->setMinimum(1);
+        inningsSpinBox->setMaximum(9);
 
-        horizontalLayout->addWidget(spinBox);
+        horizontalLayout->addWidget(inningsSpinBox);
 
-        checkBox = new QCheckBox(verticalLayoutWidget);
-        checkBox->setObjectName(QString::fromUtf8("checkBox"));
+        extrasCheckBox = new QCheckBox(verticalLayoutWidget);
+        extrasCheckBox->setObjectName(QString::fromUtf8("extrasCheckBox"));
 
-        horizontalLayout->addWidget(checkBox);
+        horizontalLayout->addWidget(extrasCheckBox);
 
 
         verticalLayout->addLayout(horizontalLayout);
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
-        checkBox_2 = new QCheckBox(verticalLayoutWidget);
-        checkBox_2->setObjectName(QString::fromUtf8("checkBox_2"));
-        checkBox_2->setChecked(true);
+        buntingCheckBox = new QCheckBox(verticalLayoutWidget);
+        buntingCheckBox->setObjectName(QString::fromUtf8("buntingCheckBox"));
+        buntingCheckBox->setChecked(true);
 
-        horizontalLayout_4->addWidget(checkBox_2);
+        horizontalLayout_4->addWidget(buntingCheckBox);
 
-        checkBox_3 = new QCheckBox(verticalLayoutWidget);
-        checkBox_3->setObjectName(QString::fromUtf8("checkBox_3"));
-        checkBox_3->setChecked(true);
+        hbpCheckBox = new QCheckBox(verticalLayoutWidget);
+        hbpCheckBox->setObjectName(QString::fromUtf8("hbpCheckBox"));
+        hbpCheckBox->setChecked(true);
 
-        horizontalLayout_4->addWidget(checkBox_3);
+        horizontalLayout_4->addWidget(hbpCheckBox);
 
 
         verticalLayout->addLayout(horizontalLayout_4);
 
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
-        checkBox_4 = new QCheckBox(verticalLayoutWidget);
-        checkBox_4->setObjectName(QString::fromUtf8("checkBox_4"));
-        checkBox_4->setChecked(true);
+        stealingCheckBox = new QCheckBox(verticalLayoutWidget);
+        stealingCheckBox->setObjectName(QString::fromUtf8("stealingCheckBox"));
+        stealingCheckBox->setChecked(true);
 
-        horizontalLayout_5->addWidget(checkBox_4);
+        horizontalLayout_5->addWidget(stealingCheckBox);
 
-        checkBox_5 = new QCheckBox(verticalLayoutWidget);
-        checkBox_5->setObjectName(QString::fromUtf8("checkBox_5"));
-        checkBox_5->setChecked(true);
+        balksCheckBox = new QCheckBox(verticalLayoutWidget);
+        balksCheckBox->setObjectName(QString::fromUtf8("balksCheckBox"));
+        balksCheckBox->setChecked(true);
 
-        horizontalLayout_5->addWidget(checkBox_5);
+        horizontalLayout_5->addWidget(balksCheckBox);
 
 
         verticalLayout->addLayout(horizontalLayout_5);
@@ -131,11 +131,11 @@ public:
 
         horizontalLayout_2->addWidget(label_2);
 
-        spinBox_2 = new QSpinBox(verticalLayoutWidget);
-        spinBox_2->setObjectName(QString::fromUtf8("spinBox_2"));
-        spinBox_2->setMaximum(3);
+        ballsSpinBox = new QSpinBox(verticalLayoutWidget);
+        ballsSpinBox->setObjectName(QString::fromUtf8("ballsSpinBox"));
+        ballsSpinBox->setMaximum(3);
 
-        horizontalLayout_2->addWidget(spinBox_2);
+        horizontalLayout_2->addWidget(ballsSpinBox);
 
         label_3 = new QLabel(verticalLayoutWidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
@@ -143,11 +143,11 @@ public:
 
         horizontalLayout_2->addWidget(label_3);
 
-        spinBox_3 = new QSpinBox(verticalLayoutWidget);
-        spinBox_3->setObjectName(QString::fromUtf8("spinBox_3"));
-        spinBox_3->setMaximum(2);
+        strikesSpinBox = new QSpinBox(verticalLayoutWidget);
+        strikesSpinBox->setObjectName(QString::fromUtf8("strikesSpinBox"));
+        strikesSpinBox->setMaximum(2);
 
-        horizontalLayout_2->addWidget(spinBox_3);
+        horizontalLayout_2->addWidget(strikesSpinBox);
 
         label_4 = new QLabel(verticalLayoutWidget);
         label_4->setObjectName(QString::fromUtf8("label_4"));
@@ -164,13 +164,13 @@ public:
 
         horizontalLayout_3->addWidget(label_5);
 
-        spinBox_4 = new QSpinBox(verticalLayoutWidget);
-        spinBox_4->setObjectName(QString::fromUtf8("spinBox_4"));
-        spinBox_4->setMinimum(1);
-        spinBox_4->setMaximum(12);
-        spinBox_4->setValue(9);
+        playersSpinBox = new QSpinBox(verticalLayoutWidget);
+        playersSpinBox->setObjectName(QString::fromUtf8("playersSpinBox"));
+        playersSpinBox->setMinimum(1);
+        playersSpinBox->setMaximum(12);
+        playersSpinBox->setValue(9);
 
-        horizontalLayout_3->addWidget(spinBox_4);
+        horizontalLayout_3->addWidget(playersSpinBox);
 
 
         verticalLayout->addLayout(horizontalLayout_3);
@@ -185,13 +185,13 @@ public:
     {
         GameOptions->setWindowTitle(QApplication::translate("GameOptions", "Game Attributes", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("GameOptions", "Number of Innings: ", 0, QApplication::UnicodeUTF8));
-        spinBox->setSuffix(QString());
-        spinBox->setPrefix(QString());
-        checkBox->setText(QApplication::translate("GameOptions", "Extra Innings Allowed?", 0, QApplication::UnicodeUTF8));
-        checkBox_2->setText(QApplication::translate("GameOptions", "Bunting Allowed?", 0, QApplication::UnicodeUTF8));
-        checkBox_3->setText(QApplication::translate("GameOptions", "HBP allowed?", 0, QApplication::UnicodeUTF8));
-        checkBox_4->setText(QApplication::translate("GameOptions", "Stealing Allowed?", 0, QApplication::UnicodeUTF8));
-        checkBox_5->setText(QApplication::translate("GameOptions", "Balks?", 0, QApplication::UnicodeUTF8));
+        inningsSpinBox->setSuffix(QString());
+        inningsSpinBox->setPrefix(QString());
+        extrasCheckBox->setText(QApplication::translate("GameOptions", "Extra Innings Allowed?", 0, QApplication::UnicodeUTF8));
+        buntingCheckBox->setText(QApplication::translate("GameOptions", "Bunting Allowed?", 0, QApplication::UnicodeUTF8));
+        hbpCheckBox->setText(QApplication::translate("GameOptions", "HBP allowed?", 0, QApplication::UnicodeUTF8));
+        stealingCheckBox->setText(QApplication::translate("GameOptions", "Stealing Allowed?", 0, QApplication::UnicodeUTF8));
+        balksCheckBox->setText(QApplication::translate("GameOptions", "Balks?", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("GameOptions", "Starts At: ", 0, QApplication::UnicodeUTF8));
         label_3->setText(QApplication::translate("GameOptions", " balls and ", 0, QApplication::UnicodeUTF8));
         label_4->setText(QApplication::translate("GameOptions", "strikes.", 0, QApplication::UnicodeUTF8));
