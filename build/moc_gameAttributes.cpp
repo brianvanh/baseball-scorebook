@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'gameAttributes.h'
 **
-** Created: Wed Sep 7 21:37:05 2011
+** Created: Mon Sep 12 19:52:36 2011
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -32,13 +32,13 @@ static const uint qt_meta_data_GameAttributes[] = {
 
  // slots: signature, parameters, type, tag, flags
       16,   15,   15,   15, 0x08,
-      29,   15,   15,   15, 0x08,
+      31,   15,   15,   15, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_GameAttributes[] = {
-    "GameAttributes\0\0okSelected()\0"
+    "GameAttributes\0\0saveSelected()\0"
     "cancelSelected()\0"
 };
 
@@ -71,7 +71,7 @@ int GameAttributes::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: okSelected(); break;
+        case 0: saveSelected(); break;
         case 1: cancelSelected(); break;
         default: ;
         }

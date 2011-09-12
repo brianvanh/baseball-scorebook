@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "ui_gameoptions.h"
+#include "types.h"
 
 class GameAttributes : public QDialog, private Ui::GameOptions
 {
@@ -12,7 +13,7 @@ class GameAttributes : public QDialog, private Ui::GameOptions
 		GameAttributes(QWidget *parent = 0);
 
 	private slots:
-		void okSelected();
+		void saveSelected();
 		void cancelSelected();
 	
 	private:
@@ -20,6 +21,7 @@ class GameAttributes : public QDialog, private Ui::GameOptions
 		void setVariable(std::string key, std::string value);
 		void writeAttributes(std::ofstream *out);
 		bool setVariablesFromUser();
+		SUB_TYPE subs;
 		int innings, startingBalls, startingStrikes, players;
 		bool extras, bunt, hbp, stealing, balks;
 };

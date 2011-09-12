@@ -12,16 +12,19 @@ GameAttributes::GameAttributes(QWidget *parent)
 	: QDialog(parent)
 {
 	setupUi(this);
+	substitutionComboBox->addItem("Softball - Unlimited");
+	substitutionComboBox->addItem("Hybrid Baseball/Softball");
+	substitutionComboBox->addItem("Baseball - Restricted");
 	if(getVariablesFromFile())
 	{
 		qDebug() << "Variables set correctly";
 	}
 	
-	connect( buttonBox, SIGNAL( accepted() ), this, SLOT( okSelected() ) );
+	connect( buttonBox, SIGNAL( accepted() ), this, SLOT( saveSelected() ) );
 	connect( buttonBox, SIGNAL( rejected() ), this, SLOT( cancelSelected() ) );
 }
 
-void GameAttributes::okSelected()
+void GameAttributes::saveSelected()
 {
 	qDebug() << "OK Selected!";
 	
@@ -85,6 +88,7 @@ bool GameAttributes::setVariablesFromUser()
 	startingBalls = ballsSpinBox -> value();
 	startingStrikes = strikesSpinBox -> value();
 	players = playersSpinBox -> value();
+	subs = Tools().IntToSUB_TYPE(substitutionComboBox -> currentIndex());
 	return true;
 }
 
@@ -149,6 +153,10 @@ void GameAttributes::setVariable(std::string key, std::string value)
 	{
 		players = atoi(value.c_str());
 		playersSpinBox -> setValue(players);
+	}else if(key == "SUBS")
+	{
+		subs = Tools().IntToSUB_TYPE(atoi(value.c_str()));
+		substitutionComboBox -> setCurrentIndex(subs);
 	}
 	
 }
@@ -165,4 +173,5 @@ void GameAttributes::writeAttributes(std::ofstream *out)
 	*out << "BALLS=" << startingBalls << std::endl;
 	*out << "STRIKES=" << startingStrikes << std::endl;
 	*out << "PLAYERS=" << players << std::endl;
+	*out << "SUBS=" << subs << std::endl;
 }
