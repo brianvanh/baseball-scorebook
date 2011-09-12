@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'gameoptions.ui'
 **
-** Created: Wed Sep 7 21:37:02 2011
+** Created: Mon Sep 12 19:52:33 2011
 **      by: Qt User Interface Compiler version 4.7.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -15,6 +15,7 @@
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
 #include <QtGui/QCheckBox>
+#include <QtGui/QComboBox>
 #include <QtGui/QDialog>
 #include <QtGui/QDialogButtonBox>
 #include <QtGui/QHBoxLayout>
@@ -29,7 +30,6 @@ QT_BEGIN_NAMESPACE
 class Ui_GameOptions
 {
 public:
-    QDialogButtonBox *buttonBox;
     QWidget *verticalLayoutWidget;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
@@ -51,20 +51,19 @@ public:
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_5;
     QSpinBox *playersSpinBox;
+    QHBoxLayout *horizontalLayout_6;
+    QLabel *label_6;
+    QComboBox *substitutionComboBox;
+    QDialogButtonBox *buttonBox;
 
     void setupUi(QDialog *GameOptions)
     {
         if (GameOptions->objectName().isEmpty())
             GameOptions->setObjectName(QString::fromUtf8("GameOptions"));
-        GameOptions->resize(413, 220);
-        buttonBox = new QDialogButtonBox(GameOptions);
-        buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
-        buttonBox->setGeometry(QRect(10, 180, 391, 27));
-        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Save);
-        buttonBox->setCenterButtons(false);
+        GameOptions->resize(414, 258);
         verticalLayoutWidget = new QWidget(GameOptions);
         verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(9, 9, 386, 161));
+        verticalLayoutWidget->setGeometry(QRect(9, 9, 386, 229));
         verticalLayout = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
@@ -175,6 +174,28 @@ public:
 
         verticalLayout->addLayout(horizontalLayout_3);
 
+        horizontalLayout_6 = new QHBoxLayout();
+        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
+        label_6 = new QLabel(verticalLayoutWidget);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+
+        horizontalLayout_6->addWidget(label_6);
+
+        substitutionComboBox = new QComboBox(verticalLayoutWidget);
+        substitutionComboBox->setObjectName(QString::fromUtf8("substitutionComboBox"));
+
+        horizontalLayout_6->addWidget(substitutionComboBox);
+
+
+        verticalLayout->addLayout(horizontalLayout_6);
+
+        buttonBox = new QDialogButtonBox(verticalLayoutWidget);
+        buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
+        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Save);
+        buttonBox->setCenterButtons(false);
+
+        verticalLayout->addWidget(buttonBox);
+
 
         retranslateUi(GameOptions);
 
@@ -196,6 +217,7 @@ public:
         label_3->setText(QApplication::translate("GameOptions", " balls and ", 0, QApplication::UnicodeUTF8));
         label_4->setText(QApplication::translate("GameOptions", "strikes.", 0, QApplication::UnicodeUTF8));
         label_5->setText(QApplication::translate("GameOptions", "Number of Players: ", 0, QApplication::UnicodeUTF8));
+        label_6->setText(QApplication::translate("GameOptions", "Substitution Approach: ", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };
